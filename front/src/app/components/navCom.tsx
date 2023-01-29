@@ -15,10 +15,31 @@ const NavCom = ({ user, loading }: { user: string; loading: boolean }) => {
           </h1>
         </div>
         <div className="px-2 flex text-white items-center">
-          {!user ? (
-            <button className="p-2 rounded transition duration-200 ease-in-out hover:bg-white/30">
-              LogIn
+          <Link href={"/"}>
+            <button className="py-2 px-5 hover:bg-white/30 rounded">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+              />
+            </svg>
+
             </button>
+          </Link>
+          {!user ? (
+            <Link href={"/login"}>
+              <button className="p-2 rounded transition duration-200 ease-in-out hover:bg-white/30">
+                LogIn
+              </button>
+            </Link>
           ) : (
             <button
               onClick={async () => {
@@ -30,7 +51,7 @@ const NavCom = ({ user, loading }: { user: string; loading: boolean }) => {
             </button>
           )}
           <Link href={"/register"}>
-            {" "}
+          
             <button className="p-2 rounded transition duration-200 ease-in-out hover:bg-white/30">
               Register
             </button>

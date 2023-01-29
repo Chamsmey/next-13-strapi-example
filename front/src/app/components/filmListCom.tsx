@@ -1,9 +1,14 @@
 import Image from "next/image";
 
-const FimlistCom = ({data}:{data:Film[]}) => {
+const FimlistCom = ({data}:{data?:Film[]}) => {
     return (  
-        <section className="w-[80%] mx-autos grid grid-cols-6 gap-2">
-        {data.map((movie) => {
+      <section className="w-[80%] mx-autos grid grid-cols-6 gap-2">
+        
+
+        <div>
+          <Image width={100} height={200} alt="MOVIE" src='https://img.yts.mx/assets/images/movies/spider_man_no_way_home_2021/medium-cover.jpg'/>
+        </div>
+        {/* {data?.map((movie) => {
           return (
             <div
               key={movie?.id}
@@ -27,7 +32,7 @@ const FimlistCom = ({data}:{data:Film[]}) => {
                 </div>
             </div>
           );
-        })}
+        })} */}
         {/* movie card*/}
       </section>
 

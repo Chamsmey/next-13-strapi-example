@@ -1,5 +1,4 @@
-"use client";
-
+'use client'
 import { useFetchUser } from "lib/userContext";
 import dynamic from "next/dynamic";
 const FormCom = dynamic(() => import("./components/formCom"));
@@ -32,9 +31,16 @@ export default function RootLayout({
             alt="banner"
           />
         </div>
-        {user ? children :<FormCom/>}
+        {/* {user ? children :<FormCom/>} */}
+
+        {
+          children
+      }
 
       <Footer/>
+        {/* <div>
+          this is register page
+        </div> */}
       </body>
     </html>
   );
